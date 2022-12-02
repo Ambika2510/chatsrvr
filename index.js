@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 
 const server = http.createServer(app);
 
-const io = socketIO(server,cors={
+const io = socketIO(server,cors:{
     origin: true
 });
 
