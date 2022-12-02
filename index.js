@@ -16,9 +16,7 @@ app.get("/", (req, res) => {
 
 const server = http.createServer(app);
 
-const io = socketIO(server,cors:{
-    origin: true
-});
+const io = socketIO(server);
 
 io.on("connection", (socket) => {
     console.log("New Connection");
